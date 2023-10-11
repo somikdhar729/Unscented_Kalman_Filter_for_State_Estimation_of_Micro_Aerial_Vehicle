@@ -43,7 +43,7 @@ In this phase of the project, our objective is to refine the state estimation pr
 
 2. **Coordinate Transformation**: Due to the disparity between the camera frame and the IMU frame used in the prior phase, we meticulously transform the optical flow velocity measurement to align with the body frame coincident with the IMU frame. This transformation is facilitated by a nonlinear measurement model, which considers the rotational relationship between the camera frame and the body frame (IMU frame).
 
-  * Nonlinear Measurement Model: This model efficiently maps the optical flow velocity from the camera frame to the body frame, accounting for the intricate transformation dynamics.
+  ** Nonlinear Measurement Model: This model efficiently maps the optical flow velocity from the camera frame to the body frame, accounting for the intricate transformation dynamics.
 
 3. Integration with IMU-driven Model: Having successfully aligned the measurement to the body frame, we seamlessly integrate it with the IMU-driven model employed in the initial phase of the project.
 
