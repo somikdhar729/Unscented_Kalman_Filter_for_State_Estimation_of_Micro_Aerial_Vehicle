@@ -32,6 +32,11 @@ Uses a linear measurement model for simplicity:
   * Applies gain to measurement residual to correct prediction
   * Updated state used for next prediction cycle
 
+### Results
+#### Dataset 1
+![alt text](https://github.com/somikdhar729/Unscented_Kalman_Filter_for_State_Estimation_of_Micro_Aerial_Vehicle/blob/main/part1_dataset1.png?raw=true)
+#### Dataset4
+![alt text](https://github.com/somikdhar729/Unscented_Kalman_Filter_for_State_Estimation_of_Micro_Aerial_Vehicle/blob/main/part1_dataset4.png?raw=true)
 
 ## Part 2: Fusing IMU and Optical Flow Data using UKF
 Incorporating Optical Flow Velocity into IMU-derived State Estimation
@@ -45,7 +50,11 @@ In this phase of the project, our objective is to refine the state estimation pr
    * Nonlinear Measurement Model: This model efficiently maps the optical flow velocity from the camera frame to the body frame, accounting for the intricate transformation dynamics.
 
 3. Integration with IMU-driven Model: Having successfully aligned the measurement to the body frame, we seamlessly integrate it with the IMU-driven model employed in the initial phase of the project.
-
+### Results
+#### Dataset 1
+![alt text](https://github.com/somikdhar729/Unscented_Kalman_Filter_for_State_Estimation_of_Micro_Aerial_Vehicle/blob/main/part2_dataset1.png?raw=true)
+#### Dataset4
+![alt text](https://github.com/somikdhar729/Unscented_Kalman_Filter_for_State_Estimation_of_Micro_Aerial_Vehicle/blob/main/part2_dataset4.png?raw=true)
 ### State Estimation with Unscented Kalman Filter (UKF)
 * Estimation Methodology: Leveraging the power of the Unscented Kalman Filter (UKF), we aim to estimate the system's state by amalgamating the refined optical flow velocity measurement with the IMU-driven model.
 
