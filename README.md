@@ -21,14 +21,14 @@ The unscented Kalman filter (UKF) implementation utilizes the unscented transfor
 
 To improve state estimation, the process model has been augmented with additional error state variables: <br>
 
-  * Gyroscope and accelerometer biases are modeled as random walks <br>
-  * Gyroscope and accelerometer noise are modeled as independent random variables <br>
+  * Gyroscope and accelerometer biases are modeled as random walks 
+  * Gyroscope and accelerometer noise are modeled as independent random variables 
   
   
 These additional error states are estimated alongside the core drone state variables like position and velocity
-<br>
-Uses a linear measurement model for simplicity:<br>
-  * Kalman gain fuses predicted state and measurement uncertainties<br>
-  * Applies gain to measurement residual to correct prediction<br>
-  * Updated state used for next prediction cycle<br>
+
+Uses a linear measurement model for simplicity:
+  * Kalman gain fuses predicted state and measurement uncertainties
+  * Applies gain to measurement residual to correct prediction
+  * Updated state used for next prediction cycle
   
