@@ -34,12 +34,20 @@ Uses a linear measurement model for simplicity:
 
 
 ## Part 2: Fusing IMU and Optical Flow Data using UKF
-We need to use only the velocity from the optical flow as the measurement. The optical flow velocity is expressed
-in the camera frame, which is different from the IMU frame used in part 1. Therefore, we need to carefully move
-the measurement to the body frame that is coincident with the IMU frame. To accomplish this, we use a nonlinear
-measurement model that maps the optical flow velocity from the camera frame to the body frame. This model should
-take into account the transformation from the camera frame to the body frame, which can be obtained from the
-rotation matrix between the two frames. <br> 
-Once we have the measurement in the body frame, we can use it along with the IMU-driven model from project 1
-to estimate the state of the system using the Unscented Kalman Filter. The UKF can capture the nonlinearity of
-the system better than a linear Kalman filter, but it might require more runtime.
+Incorporating Optical Flow Velocity into IMU-derived State Estimation
+
+In this phase of the project, our objective is to refine the state estimation process for the micro-aerial vehicle. We focus on utilizing the optical flow velocity as a crucial measurement, specifically aligning it with the IMU frame utilized in the previous project phase.
+
+### Measurement Alignment and Model Integration
+1. **Measurement Source**: We isolate the velocity component from optical flow, which is initially expressed in the camera frame.
+
+2. **Coordinate Transformation**: Due to the disparity between the camera frame and the IMU frame used in the prior phase, we meticulously transform the optical flow velocity measurement to align with the body frame coincident with the IMU frame. This transformation is facilitated by a nonlinear measurement model, which considers the rotational relationship between the camera frame and the body frame (IMU frame).
+
+  * Nonlinear Measurement Model: This model efficiently maps the optical flow velocity from the camera frame to the body frame, accounting for the intricate transformation dynamics.
+
+3. Integration with IMU-driven Model: Having successfully aligned the measurement to the body frame, we seamlessly integrate it with the IMU-driven model employed in the initial phase of the project.
+
+### State Estimation with Unscented Kalman Filter (UKF)
+* Estimation Methodology: Leveraging the power of the Unscented Kalman Filter (UKF), we aim to estimate the system's state by amalgamating the refined optical flow velocity measurement with the IMU-driven model.
+
+* Advantages of UKF: The UKF excels in capturing the inherent nonlinearity of the system, a superior alternative to a linear Kalman filter. Despite potential increased runtime, the UKF significantly enhances the accuracy and robustness of our state estimation.
