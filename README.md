@@ -35,6 +35,7 @@ Uses a linear measurement model for simplicity:
 ### Results
 #### Dataset 1
 ![alt text](https://github.com/somikdhar729/Unscented_Kalman_Filter_for_State_Estimation_of_Micro_Aerial_Vehicle/blob/main/part1_dataset1.png?raw=true)
+
 #### Dataset4
 ![alt text](https://github.com/somikdhar729/Unscented_Kalman_Filter_for_State_Estimation_of_Micro_Aerial_Vehicle/blob/main/part1_dataset4.png?raw=true)
 
@@ -50,12 +51,15 @@ In this phase of the project, our objective is to refine the state estimation pr
    * Nonlinear Measurement Model: This model efficiently maps the optical flow velocity from the camera frame to the body frame, accounting for the intricate transformation dynamics.
 
 3. Integration with IMU-driven Model: Having successfully aligned the measurement to the body frame, we seamlessly integrate it with the IMU-driven model employed in the initial phase of the project.
-### Results
-#### Dataset 1
-![alt text](https://github.com/somikdhar729/Unscented_Kalman_Filter_for_State_Estimation_of_Micro_Aerial_Vehicle/blob/main/part2_dataset1.png?raw=true)
-#### Dataset4
-![alt text](https://github.com/somikdhar729/Unscented_Kalman_Filter_for_State_Estimation_of_Micro_Aerial_Vehicle/blob/main/part2_dataset4.png?raw=true)
+
 ### State Estimation with Unscented Kalman Filter (UKF)
 * Estimation Methodology: Leveraging the power of the Unscented Kalman Filter (UKF), we aim to estimate the system's state by amalgamating the refined optical flow velocity measurement with the IMU-driven model.
 
 * Advantages of UKF: The UKF excels in capturing the inherent nonlinearity of the system, a superior alternative to a linear Kalman filter. Despite potential increased runtime, the UKF significantly enhances the accuracy and robustness of our state estimation.
+
+### Results
+#### Dataset 1
+![alt text](https://github.com/somikdhar729/Unscented_Kalman_Filter_for_State_Estimation_of_Micro_Aerial_Vehicle/blob/main/part2_dataset1.png?raw=true)
+
+#### Dataset4
+![alt text](https://github.com/somikdhar729/Unscented_Kalman_Filter_for_State_Estimation_of_Micro_Aerial_Vehicle/blob/main/part2_dataset4.png?raw=true)
