@@ -15,14 +15,15 @@ The visual pose estimation was expressed in the world frame, so the same linear 
 
 ### Methodology
 The unscented Kalman filter (UKF) implementation utilizes the unscented transform to propagate sigma points through the nonlinear process model. This captures the drone's state dynamics more accurately than linearization techniques. <br>
-  * Computes optimized sigma points from the state mean and covariance <br>
-  * Propagates points through process model to predict next state <br>
+  * Computes optimized sigma points from the state mean and covariance 
+  * Propagates points through process model to predict next state 
   * Calculates predicted mean and covariance as weighted sums of propagated points
-<br>
+
 To improve state estimation, the process model has been augmented with additional error state variables: <br>
 
   * Gyroscope and accelerometer biases are modeled as random walks <br>
   * Gyroscope and accelerometer noise are modeled as independent random variables <br>
+  
   
 These additional error states are estimated alongside the core drone state variables like position and velocity
 <br>
